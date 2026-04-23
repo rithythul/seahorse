@@ -1,3 +1,4 @@
+import { logger } from '@seahorse/logger'
 import { closeDatabase, getDatabase } from './database.js'
 import { handleMessage } from './loop.js'
 import type { SeahorseAgent } from './types.js'
@@ -36,21 +37,21 @@ export async function bootstrap(agent: SeahorseAgent): Promise<() => Promise<voi
           identityResolver: agent.identityResolver,
         })
       } catch (err) {
-        console.error(`[seahorse] error handling message on ${channel.id}:`, err)
+        logger.error(`error handling message on ${channel.id}:`, err)
       }
     })
 
     await channel.start()
-    console.log(`[seahorse] channel ready: ${channel.name}`)
+    logger.info(`channel ready: ${channel.name}`)
   }
 
-  console.log(
-    `[seahorse] ${agent.business.name} (${agent.business.vertical}) — ${agent.channels.length} channel(s) active`,
+  logger.info(
+    `${agent.business.name} (${agent.business.vertical}) — ${agent.channels.length} channel(s) active`,
   )
 
   return async () => {
     await Promise.all(agent.channels.map((c) => c.stop()))
     closeDatabase()
-    console.log('[seahorse] shutdown complete')
+    logger.info('shutdown complete')
   }
 }

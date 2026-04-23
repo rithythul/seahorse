@@ -31,6 +31,7 @@ export class SqliteMemory implements IMemory {
   }
 
   async recall(businessId: string, query: string, limit = 5): Promise<MemoryEntry[]> {
+    const safeQuery = `"${query.replace(/"/g, '""')}"`
     const rows = this.db.query<MemoryRow, [string, string, number]>(`
       SELECT m.id, m.business_id, m.content, m.importance, m.tags, m.created_at, m.last_accessed_at
       FROM memory_fts
@@ -39,7 +40,7 @@ export class SqliteMemory implements IMemory {
         AND m.business_id = ?
       ORDER BY m.importance DESC
       LIMIT ?
-    `).all(query, businessId, limit)
+    `).all(safeQuery, businessId, limit)
 
     if (rows.length === 0) return []
 
