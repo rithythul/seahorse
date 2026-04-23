@@ -1,0 +1,31 @@
+{
+  "name": "kosal",
+  "version": "0.1.0",
+  "description": "KOOMPI AI Agent — Your business, always on.",
+  "license": "MIT",
+  "author": "KOOMPI",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "skills/*",
+    "src/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd src/cli dev",
+    "start": "bun run --cwd src/cli start",
+    "build": "bun run build:packages && bun run build:skills && bun run build:apps",
+    "build:packages": "bun run --filter './packages/*' build",
+    "build:skills": "bun run --filter './skills/*' build",
+    "build:apps": "bun run --cwd src/cli build && bun run --cwd src/web build",
+    "test": "bun test",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4",
+    "@types/bun": "latest",
+    "@types/node": "^25.0.0",
+    "typescript": "^5.7.0"
+  }
+}
