@@ -1,3 +1,4 @@
+import { logger } from '@seahorse/logger'
 import type { Database } from 'bun:sqlite'
 import type {
   Business,
@@ -73,7 +74,7 @@ export async function handleMessage(
   appendMessage(db, session.id, userMsg)
 
   if (debug) {
-    console.log(`[seahorse] ${business.name} | ${channel.id} | ${identity.role}: ${msg.content}`)
+    logger.debug(`${business.name} | ${channel.id} | ${identity.role}: ${msg.content}`)
   }
 
   // Agent loop — runs until text response or max iterations
@@ -123,7 +124,7 @@ export async function handleMessage(
         appendMessage(db, session.id, toolMsg)
 
         if (debug) {
-          console.log(`[seahorse] tool: ${toolCall.name} → ${result.slice(0, 100)}`)
+          logger.debug(`tool: ${toolCall.name} → ${result.slice(0, 100)}`)
         }
       }
     }
