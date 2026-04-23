@@ -13,7 +13,7 @@ const BusinessSchema = z.object({
 })
 
 const ProviderSchema = z.object({
-  type: z.enum(['anthropic', 'openai', 'ollama']),
+  type: z.enum(['anthropic', 'openai', 'ollama', 'gemini']),
   apiKey: z.string().optional(),
   model: z.string(),
   baseUrl: z.string().optional(),
@@ -50,10 +50,18 @@ export function loadConfigFromEnv(): SeahorseConfig {
     },
     provider: {
       type: process.env.SEAHORSE_PROVIDER_TYPE ?? 'anthropic',
-      apiKey: process.env.ANTHROPIC_API_KEY ?? process.env.OPENAI_API_KEY,
+      apiKey:
+        process.env.ANTHROPIC_API_KEY ??
+        process.env.OPENAI_API_KEY ??
+        process.env.GEMINI_API_KEY,
       model:
         process.env.SEAHORSE_MODEL ??
-        (process.env.SEAHORSE_PROVIDER_TYPE === 'openai' ? 'gpt-4o' : 'claude-sonnet-4-6'),
+        ({
+          openai: 'gpt-4o',
+          ollama: 'llama3.2',
+          gemini: 'gemini-2.0-flash',
+          anthropic: 'claude-sonnet-4-6',
+        }[process.env.SEAHORSE_PROVIDER_TYPE ?? 'anthropic'] ?? 'claude-sonnet-4-6'),
       baseUrl: process.env.SEAHORSE_PROVIDER_BASE_URL,
     },
     database: {

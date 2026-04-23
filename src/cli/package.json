@@ -10,6 +10,13 @@
     "build": "bun build ./src/index.ts --outdir ./dist --target bun"
   },
   "dependencies": {
-    "@seahorse/core": "workspace:*"
+    "@seahorse/core": "workspace:*",
+    "@seahorse/memory": "workspace:*",
+    "@seahorse/provider-anthropic": "workspace:*",
+    "@seahorse/provider-openai": "workspace:*",
+    "@seahorse/provider-ollama": "workspace:*",
+    "@seahorse/provider-gemini": "workspace:*",
+    "@seahorse/channel-telegram": "workspace:*",
+    "@seahorse/skill-fnb": "workspace:*"
   }
 }
