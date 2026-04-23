@@ -106,6 +106,14 @@
       "name": "@seahorse/router",
       "version": "0.1.0",
     },
+    "scripts": {
+      "name": "@seahorse/scripts",
+      "version": "0.1.0",
+      "dependencies": {
+        "@seahorse/core": "workspace:*",
+        "@seahorse/skill-fnb": "workspace:*",
+      },
+    },
     "skills/education": {
       "name": "@seahorse/skill-education",
       "version": "0.1.0",
@@ -229,6 +237,8 @@
     "@seahorse/provider-openai": ["@seahorse/provider-openai@workspace:packages/provider-openai"],
 
     "@seahorse/router": ["@seahorse/router@workspace:packages/router"],
+
+    "@seahorse/scripts": ["@seahorse/scripts@workspace:scripts"],
 
     "@seahorse/skill-education": ["@seahorse/skill-education@workspace:skills/education"],
 

@@ -1,0 +1,14 @@
+{
+  "name": "@seahorse/scripts",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./seed-fnb.ts",
+  "type": "module",
+  "scripts": {
+    "seed:fnb": "bun seed-fnb.ts"
+  },
+  "dependencies": {
+    "@seahorse/core": "workspace:*",
+    "@seahorse/skill-fnb": "workspace:*"
+  }
+}

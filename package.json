@@ -9,7 +9,8 @@
     "packages/*",
     "skills/*",
     "channels/*",
-    "src/*"
+    "src/*",
+    "scripts"
   ],
   "scripts": {
     "dev": "bun run --cwd src/cli dev",
@@ -21,7 +22,8 @@
     "test": "bun test",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "seed:fnb": "bun run scripts/seed-fnb.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.4",
