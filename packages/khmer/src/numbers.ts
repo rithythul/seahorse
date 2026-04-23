@@ -11,7 +11,9 @@ export function toKhmerDigits(n: number): string {
 
 export function formatPrice(usd: number): string {
   const riel = Math.round(usd * KHR_RATE)
-  const rielFormatted = toKhmerDigits(riel).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  const rielFormatted = toKhmerDigits(
+    String(riel).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  )
   return `$${usd.toFixed(2)} (≈ ${rielFormatted} រៀល)`
 }
 

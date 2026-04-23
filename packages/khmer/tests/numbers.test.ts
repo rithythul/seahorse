@@ -12,6 +12,9 @@ describe('formatPrice', () => {
     expect(result).toContain('$2.50')
     expect(result).toContain('រៀល')
   })
+  test('applies thousand-separator before Khmer conversion', () => {
+    expect(formatPrice(2.50)).toContain('១០,២៥០')
+  })
 })
 
 describe('numberToKhmerWords', () => {
