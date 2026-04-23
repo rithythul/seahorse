@@ -37,6 +37,9 @@
     "packages/memory": {
       "name": "@seahorse/memory",
       "version": "0.1.0",
+      "dependencies": {
+        "@seahorse/core": "workspace:*",
+      },
     },
     "packages/router": {
       "name": "@seahorse/router",
