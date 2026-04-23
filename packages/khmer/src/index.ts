@@ -1,1 +1,1 @@
-// @kosal/khmer
+// @seahorse/khmer

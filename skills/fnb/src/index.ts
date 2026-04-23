@@ -1,1 +1,1 @@
-// @kosal/skill-fnb
+// @seahorse/skill-fnb

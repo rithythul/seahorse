@@ -1,1 +1,1 @@
-// @kosal/delegation
+// @seahorse/delegation

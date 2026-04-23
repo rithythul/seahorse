@@ -1,1 +1,1 @@
-// @kosal/skill-retail
+// @seahorse/skill-retail

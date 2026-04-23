@@ -1,5 +1,5 @@
 {
-  "name": "@kosal/skill-retail",
+  "name": "@seahorse/skill-retail",
   "version": "0.1.0",
   "license": "MIT",
   "private": false,
@@ -9,6 +9,6 @@
     "test": "bun test"
   },
   "dependencies": {
-    "@kosal/core": "workspace:*"
+    "@seahorse/core": "workspace:*"
   }
 }

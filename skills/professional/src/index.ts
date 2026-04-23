@@ -1,1 +1,1 @@
-// @kosal/skill-professional
+// @seahorse/skill-professional

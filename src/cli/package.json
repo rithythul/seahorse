@@ -1,5 +1,5 @@
 {
-  "name": "@kosal/cli",
+  "name": "@seahorse/cli",
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
@@ -10,6 +10,6 @@
     "build": "bun build ./src/index.ts --outdir ./dist --target bun"
   },
   "dependencies": {
-    "@kosal/core": "workspace:*"
+    "@seahorse/core": "workspace:*"
   }
 }

@@ -1,1 +1,1 @@
-// @kosal/core
+// @seahorse/core

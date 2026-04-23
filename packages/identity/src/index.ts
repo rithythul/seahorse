@@ -1,1 +1,1 @@
-// @kosal/identity
+// @seahorse/identity

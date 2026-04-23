@@ -1,1 +1,1 @@
-// @kosal/compactor
+// @seahorse/compactor

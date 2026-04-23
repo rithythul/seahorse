@@ -1,1 +1,1 @@
-// @kosal/skill-education
+// @seahorse/skill-education

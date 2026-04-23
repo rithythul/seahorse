@@ -1,11 +1,11 @@
-# KOSAL — KOOMPI AI Agent
+# SEAHORSE — KOOMPI AI Agent
 
 > Your business, always on. · ជំនួយការអាជីវកម្មរបស់អ្នក
 
 
-## What Is Kosal?
+## What Is Seahorse?
 
-Kosal is KOOMPI's open-source AI agent for business owners. It runs on the channels businesses already use — Telegram, Facebook, WhatsApp, Discord — and handles daily operations autonomously: taking orders, posting content, tracking inventory, reporting sales, communicating with staff and customers in Khmer and English.
+Seahorse is KOOMPI's open-source AI agent for business owners. It runs on the channels businesses already use — Telegram, Facebook, WhatsApp, Discord — and handles daily operations autonomously: taking orders, posting content, tracking inventory, reporting sales, communicating with staff and customers in Khmer and English.
 
 It is not a chatbot. It is not a dashboard. It is an agent that works.
 
@@ -14,14 +14,14 @@ It is not a chatbot. It is not a dashboard. It is an agent that works.
 
 70M+ SMEs across Southeast Asia run their operations inside messaging apps. A restaurant owner manages orders on Telegram, posts menus on Facebook, coordinates staff on WhatsApp — manually, every day. There is no AI agent built for this reality. Generic AI assistants don't know Khmer. SaaS dashboards require training nobody has time for.
 
-Kosal meets business owners where they already are.
+Seahorse meets business owners where they already are.
 
 
 ## Strategic Position
 
 | Layer | What |
 | - | - |
-| **Open source** | Kosal runtime, channel integrations, skill packs, Khmer language tools — MIT licensed, self-hostable |
+| **Open source** | Seahorse runtime, channel integrations, skill packs, Khmer language tools — MIT licensed, self-hostable |
 | **KOOMPI Cloud** | Managed hosting, fine-tuned Khmer models, multi-tenant infrastructure, analytics, SLA |
 | **KOOMPI Mini** | Hardware-bundled deployment — plug in, works immediately, data stays local |
 
@@ -33,9 +33,9 @@ The moat is not the code. It is the Khmer business data that accumulates on KOOM
 
 ### Runtime Layer
 
-Kosal uses **OpenClaw** as its channel and runtime foundation (MIT). OpenClaw is a dependency, not a fork — upstream updates (new channels, security patches, model support) are absorbed with `bun update openclaw`. Kosal's business logic is never entangled with OpenClaw's core.
+Seahorse uses **OpenClaw** as its channel and runtime foundation (MIT). OpenClaw is a dependency, not a fork — upstream updates (new channels, security patches, model support) are absorbed with `bun update openclaw`. Seahorse's business logic is never entangled with OpenClaw's core.
 
-### Kosal Packages (KOOMPI IP)
+### Seahorse Packages (KOOMPI IP)
 
 Built from scratch, MIT licensed, inspired by TinyClaw's architecture patterns (not its code):
 
@@ -88,7 +88,7 @@ Each channel has a natural role. Same agent brain, right register per surface:
 
 ### Identity + Context Routing
 
-On first message per session, Kosal resolves:
+On first message per session, Seahorse resolves:
 
 1. **Who** — owner, staff member, or customer
 
@@ -117,14 +117,14 @@ One vertical must be *unnervingly good* before the next ships.
 The complete daily loop a restaurant/cafe owner gets on day one:
 
 ```
-7:00am  Kosal posts today's menu to Facebook + Telegram (Khmer caption, auto-generated)  
-During  Customers order via WhatsApp/Telegram — Kosal tracks every order  
-5:00pm  Kosal sends daily sales summary to owner (items sold, revenue, top dish)  
-Weekly  Kosal suggests which dishes to promote based on order history  
+7:00am  Seahorse posts today's menu to Facebook + Telegram (Khmer caption, auto-generated)  
+During  Customers order via WhatsApp/Telegram — Seahorse tracks every order  
+5:00pm  Seahorse sends daily sales summary to owner (items sold, revenue, top dish)  
+Weekly  Seahorse suggests which dishes to promote based on order history  
 Always  Owner can ask in Khmer: "តើថ្ងៃនេះយើងលក់បានប៉ុន្មាន?" → instant answer
 ```
 
-**v1 is done when:** A Phnom Penh cafe can run its daily digital operations entirely through Kosal with zero manual steps.
+**v1 is done when:** A Phnom Penh cafe can run its daily digital operations entirely through Seahorse with zero manual steps.
 
 
 ## Khmer AI Stack
@@ -216,10 +216,10 @@ kosal/
 
 ## Contributor Agreement
 
-All contributors must sign a CLA before their first PR is merged. This ensures KOOMPI can operate Kosal as a commercial managed service without GPL-style obligations affecting the cloud infrastructure. The open-source MIT license on the code itself is unaffected — contributors and users retain full rights to self-host.
+All contributors must sign a CLA before their first PR is merged. This ensures KOOMPI can operate Seahorse as a commercial managed service without GPL-style obligations affecting the cloud infrastructure. The open-source MIT license on the code itself is unaffected — contributors and users retain full rights to self-host.
 
 
-## What Kosal Is Not
+## What Seahorse Is Not
 
 - Not a generic AI assistant
 
@@ -237,5 +237,5 @@ All contributors must sign a CLA before their first PR is merged. This ensures K
 **Kosal (គោសល)** — Khmer for *skillful, capable, proficient*. Also a Cambodian name. The agent should feel like a capable colleague, not a software product.
 
 
-*This document is the source of truth for KOOMPI Kosal. Update it when decisions change.*
+*This document is the source of truth for KOOMPI Seahorse. Update it when decisions change.*
 

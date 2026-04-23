@@ -1,7 +1,7 @@
 {
-  "name": "kosal",
+  "name": "seahorse",
   "version": "0.1.0",
-  "description": "KOOMPI AI Agent — Your business, always on.",
+  "description": "KOOMPI Seahorse — Your business, always on.",
   "license": "MIT",
   "author": "KOOMPI",
   "private": true,

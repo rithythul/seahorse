@@ -1,1 +1,1 @@
-// @kosal/memory
+// @seahorse/memory
