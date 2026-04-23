@@ -1,0 +1,14 @@
+{
+  "name": "@seahorse/channel-whatsapp",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": false,
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@seahorse/core": "workspace:*"
+  }
+}

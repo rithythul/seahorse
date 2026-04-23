@@ -33,7 +33,7 @@ The moat is not the code. It is the Khmer business data that accumulates on KOOM
 
 ### Runtime Layer
 
-Seahorse uses **OpenClaw** as its channel and runtime foundation (MIT). OpenClaw is a dependency, not a fork — upstream updates (new channels, security patches, model support) are absorbed with `bun update openclaw`. Seahorse's business logic is never entangled with OpenClaw's core.
+Seahorse owns its full runtime — no dependency on OpenClaw or any other agent framework. Channels are direct implementations using best-in-class TypeScript libraries (grammy for Telegram, etc.). This means no upstream breaking changes, no daemon process to manage, and no architectural constraints imposed by another project's design decisions.
 
 ### Seahorse Packages (KOOMPI IP)
 
