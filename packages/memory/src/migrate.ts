@@ -27,7 +27,8 @@ export function migrateMemory(db: Database): void {
     CREATE VIRTUAL TABLE IF NOT EXISTS memory_fts USING fts5(
       content,
       content='memories',
-      content_rowid='rowid'
+      content_rowid='rowid',
+      tokenize='unicode61 remove_diacritics 2'
     )
   `)
 }
