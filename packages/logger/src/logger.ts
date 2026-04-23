@@ -37,10 +37,6 @@ function getPrefix(level: Level, useColor: boolean): string {
   const useDebugTimestamp = minLevel === 'debug'
   const timestamp = useDebugTimestamp ? new Date().toISOString() + ' ' : ''
 
-  if (level === 'info' && useColor) {
-    return `${COLORS.info}[seahorse]${RESET} `
-  }
-
   const color = useColor ? COLORS[level] : ''
   const reset = useColor ? RESET : ''
   const levelStr = level.padEnd(5)
